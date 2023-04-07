@@ -1,3 +1,3 @@
 import cv2
 
-print("Hello world")
+print("Look at me now")
