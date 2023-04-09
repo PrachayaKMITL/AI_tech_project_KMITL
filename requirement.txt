@@ -1,0 +1,3 @@
+# AI_tech_project_KMITL
+# Repository for AI tech project kmitl for RAI section 2
+nltk == 3.8.1
