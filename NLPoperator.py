@@ -20,8 +20,7 @@ class nlpCleaner :
         con = re.sub('[^a-zA-Z]',' ',content) #Add stemming to the datapoints in the dataset
         con = con.lower()
         con = con.split()
-        [stemmer.stem(word) for word in word if not word in stopwords.words('english')]
+        [stemmer.stem(word) for word in con if not word in stopwords.words('english')]
         con = ''.join(con)
-
         return con
 
