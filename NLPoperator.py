@@ -5,6 +5,7 @@ import numpy as np
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize  
 from nltk.stem.porter import PorterStemmer
+import gensim.word2vec 
 
 class nlpCleaner :
     def extract_csv(df,title_column):
