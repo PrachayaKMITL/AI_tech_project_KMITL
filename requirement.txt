@@ -2,3 +2,4 @@
 # Repository for AI tech project kmitl for RAI section 2
 nltk == 3.8.1
 scikit-learn == 1.2.2
+gensim == 4.3.1
