@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize  
+from nltk.stem.porter import PorterStemmer
 
 class nlpCleaner :
     def extract_csv(df,title_column):
@@ -14,8 +15,13 @@ class nlpCleaner :
         stopwords = set(stopwords.words('english'))
         df['clean_title'] = df['title'].apply(lambda x: ' '.join([word for word in x.split() if word not in (stopwords)]))
 
+    def stemming(content):
+        stemmer = PorterStemmer()
+        con = re.sub('[^a-zA-Z]',' ',content) #Add stemming to the datapoints in the dataset
+        con = con.lower()
+        con = con.split()
+        [stemmer.stem(word) for word in word if not word in stopwords.words('english')]
+        con = ''.join(con)
 
-
-
-
+        return con
 
